@@ -29,10 +29,10 @@ class UsersController {
         return
       }
       if (!passwordPattern.test(password)) {
-        logger.warn('建立使用者錯誤: 密碼不符合規則，需要包含英文數字大小寫，最短8個字，最長16個字')
+        logger.warn('建立使用者錯誤: 密碼不符合規則，需要包含英文數字大小寫，最短10個字，最長16個字')
         res.status(400).json({
           status: 'failed',
-          message: '密碼不符合規則，需要包含英文數字大小寫，最短8個字，最長16個字'
+          message: '密碼不符合規則，需要包含英文數字大小寫，最短10個字，最長16個字'
         })
         return
       }
